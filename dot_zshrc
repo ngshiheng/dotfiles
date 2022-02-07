@@ -99,12 +99,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # https://github.com/moovweb/gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
-# For Loading the SSH key
-# Now, each time you reboot, you’ll have to enter your passphrase. 
-# But you only have to do it one time until you reboot or terminate WSL.
-if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
-    /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed_25519_github
-    source $HOME/.keychain/$HOST-sh
-fi
-
+# ...
 [[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"

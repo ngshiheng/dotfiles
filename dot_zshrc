@@ -106,3 +106,5 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
     /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed_25519_github
     source $HOME/.keychain/$HOST-sh
 fi
+
+[[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"

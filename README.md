@@ -17,7 +17,7 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 With chezmoi, you can install chezmoi and your dotfiles on a new, empty machine with a single command:
 
 ```sh
-sh -c "$(curl -fsLS chezmoi.io/get)" --init --apply ngshiheng
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ngshiheng
 ```
 
 ## How to use chezmoi

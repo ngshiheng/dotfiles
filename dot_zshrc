@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,16 +76,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -107,11 +97,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # https://github.com/moovweb/gvm
-[[ -s "/home/jerryng/.gvm/scripts/gvm" ]] && source "/home/jerryng/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # For Loading the SSH key
 # Now, each time you reboot, you’ll have to enter your passphrase. 
 # But you only have to do it one time until you reboot or terminate WSL.
-/usr/bin/keychain -q --nogui $HOME/.ssh/id_ed_25519_github
-source $HOME/.keychain/$HOST-sh
-
+if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+    /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed_25519_github
+    source $HOME/.keychain/$HOST-sh
+fi

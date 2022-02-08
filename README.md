@@ -6,8 +6,8 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
 | Tools             | Description                                                         |
 | ----------------- | ------------------------------------------------------------------- |
-| Terminal emulator | [Alacritty](https://alacritty.org/)                                 |
-| Package manager   | [Homebrew](https://brew.sh/) for macOS + WSL2 (Ubuntu 20.04 LTS)    |
+| Terminal emulator | Windows Terminal (WSL2) & [iTerm2](https://iterm2.com/)             |
+| Package manager   | [Homebrew](https://brew.sh/)                                        |
 | Unix shell        | [Z shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)   |
 | Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k) Zsh theme |
 | Dotfiles manager  | [chezmoi](https://chezmoi.io/)                                      |

@@ -12,6 +12,10 @@ if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
 
     # Install p10k
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+    # Run chezmoi update
+    chezmoi update -v -a
+    exec zsh
 else
     echo 'Installation failed. Please install zsh first.'
 fi

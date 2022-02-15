@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -n "$($SHELL -c "echo $ZSH_VERSION")" ]; then
+if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
     # Install ohmyzsh
     rm -rf "$HOME/.oh-my-zsh"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

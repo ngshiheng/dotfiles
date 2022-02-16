@@ -1,4 +1,6 @@
 {{- $email := promptString "email" -}}
+{{- $gpgsign := promptBool "gpgsign" false}}
 
 [data]
     email = {{ $email | quote }}
+    gpgsign = {{ $gpgsign }}

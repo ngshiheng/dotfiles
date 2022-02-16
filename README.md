@@ -12,7 +12,7 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 | Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)         |
 | Dotfiles manager  | [chezmoi](https://chezmoi.io/)                                    |
 
-## Get started
+## Getting started
 
 Install chezmoi and the dotfiles on any new machine with a single command:
 
@@ -24,6 +24,12 @@ On any machine, you can pull and apply the latest changes from your repo with:
 
 ```sh
 chezmoi update -v
+```
+
+To add/remove/edit prompts:
+
+```sh
+vim ~/.local/share/chezmoi/.chezmoi.toml.tmpl
 ```
 
 ## How to use chezmoi

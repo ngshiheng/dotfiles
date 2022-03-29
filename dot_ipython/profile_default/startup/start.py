@@ -5,7 +5,6 @@ import types
 import typing
 from collections import Counter, defaultdict, deque
 
-DISPLAY_NAME = "Jerry"
 HIDDEN = {types.__name__, typing.__name__}
 
 
@@ -22,7 +21,5 @@ imports = [f"{imp!r}" for imp in get_imports() if imp not in HIDDEN]
 filtered_imports = ", ".join(imports)
 
 print(
-    f"👋 Hello, {DISPLAY_NAME}!\n"
-    f"🐍 Successfully imported these {len(imports)} modules: {filtered_imports}.\n"
-    "👨‍💻 Happy coding."
+    f"Successfully imported these {len(imports)} modules: {filtered_imports}.\n"
 )

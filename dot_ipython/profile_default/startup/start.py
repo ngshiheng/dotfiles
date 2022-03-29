@@ -6,7 +6,7 @@ import typing
 from collections import Counter, defaultdict, deque
 
 DISPLAY_NAME = "Jerry"
-HIDDEN = {"types", "typing"}
+HIDDEN = {types.__name__, typing.__name__}
 
 
 def get_imports() -> typing.Iterator[str]:
@@ -18,12 +18,11 @@ def get_imports() -> typing.Iterator[str]:
             yield module_type.__name__
 
 
-print(f"👋 Hello, {DISPLAY_NAME}!")
-
 imports = [f"{imp!r}" for imp in get_imports() if imp not in HIDDEN]
 filtered_imports = ", ".join(imports)
 
 print(
+    f"👋 Hello, {DISPLAY_NAME}!\n"
     f"🐍 Successfully imported these {len(imports)} modules: {filtered_imports}.\n"
     "👨‍💻 Happy coding."
 )

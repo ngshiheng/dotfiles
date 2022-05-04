@@ -101,3 +101,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # ...
 [[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"
+
+# https://github.com/junegunn/fzf 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# https://github.com/Textualize/rich-cli
+# https://pygments.org/styles/
+alias cat='rich --theme inkpot'

@@ -1,0 +1,4 @@
+# https://github.com/Textualize/rich-cli
+# https://pygments.org/styles/
+alias cat='rich --theme inkpot'
+

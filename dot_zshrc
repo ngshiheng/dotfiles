@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
+source .aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -105,6 +106,3 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # https://github.com/junegunn/fzf 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# https://github.com/Textualize/rich-cli
-# https://pygments.org/styles/
-alias cat='rich --theme inkpot'

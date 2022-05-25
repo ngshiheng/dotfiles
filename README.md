@@ -4,13 +4,13 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
 ## What I use
 
-| Tools             | Description                                                       |
-| ----------------- | ----------------------------------------------------------------- |
-| Terminal emulator | Windows Terminal (WSL2) & [iTerm2](https://iterm2.com/)           |
-| Package manager   | [Homebrew](https://brew.sh/)                                      |
-| Unix shell        | [Z shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) |
-| Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)         |
-| Dotfiles manager  | [chezmoi](https://chezmoi.io/)                                    |
+| Tools             | Description                                                                                         |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| Terminal emulator | [Windows Terminal](https://github.com/microsoft/terminal) (on WSL2) & [iTerm2](https://iterm2.com/) |
+| Package manager   | [Homebrew](https://brew.sh/)                                                                        |
+| Unix shell        | [Z shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)                                   |
+| Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                                           |
+| Dotfiles manager  | [chezmoi](https://chezmoi.io/)                                                                      |
 
 ## Getting started
 
@@ -32,6 +32,8 @@ To add/remove/edit prompts:
 vim ~/.local/share/chezmoi/.chezmoi.toml.tmpl
 ```
 
-## How to use chezmoi
+Check out the [Quick Start](https://www.chezmoi.io/quick-start/) page.
 
-Read the [Quick Start](https://www.chezmoi.io/quick-start/) page.
+## Reference
+
+[How To Manage Dotfiles With Chezmoi](https://jerrynsh.com/how-to-manage-dotfiles-with-chezmoi/)

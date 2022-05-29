@@ -1,5 +1,6 @@
 import datetime
 import heapq
+import pprint
 import time
 import types
 import typing
@@ -22,4 +23,12 @@ filtered_imports = ", ".join(imports)
 
 print(
     f"Successfully imported these {len(imports)} modules: {filtered_imports}.\n"
+    f"Shadowing `print` with `pprint`.\n"
 )
+
+pp = pprint.PrettyPrinter(
+    indent=2,
+    sort_dicts=False,
+)
+
+print = pp.pprint

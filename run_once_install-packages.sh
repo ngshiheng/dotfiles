@@ -7,19 +7,21 @@ exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+echo "${BLUE} $(date -u):\t Running run_once_install-packages.sh once..."
+
 # Install Homebrew
 # https://brew.sh/
 if exists brew; then
-    echo "${BLUE} Updating Homebrew."
+    echo "${BLUE} $(date -u):\t Updating Homebrew..."
     brew update
 else
-    echo "${BLUE} Installing Homebrew."
+    echo "${BLUE} $(date -u):\t Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install zsh
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-on-many-platforms
-brew install zsh
+brew install zsh --quiet
 
 # Install Oh My Zsh
 # https://ohmyz.sh/#install
@@ -37,7 +39,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Install p10k
 # https://github.com/romkatv/powerlevel10k#homebrew
-if ! exists p10k; then brew install romkatv/powerlevel10k/powerlevel10k; fi
+brew install romkatv/powerlevel10k/powerlevel10k --quiet
 
 # Install fzf
 # https://github.com/junegunn/fzf#using-homebrew
@@ -45,14 +47,19 @@ if ! exists fzf; then brew install fzf && "$(brew --prefix)"/opt/fzf/install --n
 
 # Install fd
 # https://github.com/sharkdp/fd#on-macos
-if ! exists fd; then brew install fd; fi
+brew install fd --quiet
 
 # install bat
 # https://github.com/sharkdp/bat#on-macos-or-linux-via-homebrew
-if ! exists bat; then brew install bat; fi
+brew install bat --quiet
 
 # Install rich
 # https://github.com/Textualize/rich-cli#macos
-if ! exists rich; then brew install rich; fi
+brew install rich --quiet
 
-echo "${BLUE} Please restart your shell."
+# Install FiraCode
+# https://github.com/tonsky/FiraCode/wiki/Installing
+# brew tap homebrew/cask-fonts --quiet
+# brew install --cask font-fira-code --quiet
+
+echo "${BLUE} $(date -u):\t Done. Please restart your shell."

@@ -2,6 +2,8 @@
 
 These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
+Upon fresh installation, the [`run_once_install-packages.sh`](run_once_install-packages.sh) (idempotent and POSIX compliant) script would be executed once.
+
 ## What I use
 
 | Tools             | Description                                                                                         |
@@ -14,11 +16,17 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
 ## Getting started
 
-Install chezmoi and the dotfiles on any new machine with a single command:
+Check out the [Quick Start](https://www.chezmoi.io/quick-start/) page.
+
+### Install chezmoi and the dotfiles on any new machine
+
+With a single command:
 
 ```sh
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ngshiheng
 ```
+
+### Update
 
 On any machine, you can pull and apply the latest changes from your repo with:
 
@@ -26,13 +34,24 @@ On any machine, you can pull and apply the latest changes from your repo with:
 chezmoi update -v
 ```
 
+### Prompts
+
+For [managing machine-to-machine differences](https://www.chezmoi.io/user-guide/manage-machine-to-machine-differences/).
+
 To add/remove/edit prompts:
 
 ```sh
 vim ~/.local/share/chezmoi/.chezmoi.toml.tmpl
 ```
 
-Check out the [Quick Start](https://www.chezmoi.io/quick-start/) page.
+### `run_once_install-packages.sh` script
+
+The [`run_once_install-packages.sh`](run_once_install-packages.sh) script runs with the following assumptions (i.e. requirements):
+
+- `bash` is installed; this is so that it can install [Homebrew](https://brew.sh/).
+- `zsh` as the default Unix shell of choice.
+
+Check out the [Understand How Scripts Work](https://www.chezmoi.io/user-guide/use-scripts-to-perform-actions/#understand-how-scripts-work) page.
 
 ## Reference
 

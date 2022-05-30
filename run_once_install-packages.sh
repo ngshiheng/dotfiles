@@ -57,9 +57,13 @@ brew install bat --quiet
 # https://github.com/Textualize/rich-cli#macos
 brew install rich --quiet
 
-# Install FiraCode
+# Install ydiff
+# https://github.com/ymattw/ydiff#install-with-homebrew
+brew install ydiff --quiet
+
+# Install Fira Code
 # https://github.com/tonsky/FiraCode/wiki/Installing
-# brew tap homebrew/cask-fonts --quiet
-# brew install --cask font-fira-code --quiet
+# brew tap homebrew/cask-fonts
+# brew install --cask font-fira-code
 
 echo "${BLUE} $(date -u):\t Done. Please restart your shell."

@@ -5,4 +5,4 @@
 alias cat='bat --paging=never'
 alias now='date "+%d-%b-%Y at %H:%M":%S'
 alias fp='fzf --preview "bat --style=numbers --color=always --line-range :500 {}"'
-
+alias yd='ydiff -s'

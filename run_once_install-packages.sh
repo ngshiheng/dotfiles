@@ -49,9 +49,13 @@ if ! exists fzf; then brew install fzf && "$(brew --prefix)"/opt/fzf/install --n
 # https://github.com/sharkdp/fd#on-macos
 brew install fd --quiet
 
-# install bat
+# Install bat
 # https://github.com/sharkdp/bat#on-macos-or-linux-via-homebrew
 brew install bat --quiet
+
+# Install ripgrep
+# https://github.com/BurntSushi/ripgrep#installation
+brew install ripgrep --quiet
 
 # Install rich
 # https://github.com/Textualize/rich-cli#macos

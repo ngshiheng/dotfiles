@@ -112,3 +112,6 @@ export FZF_DEFAULT_OPTS="--ansi"
 # https://github.com/BurntSushi/ripgrep
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
+# https://github.com/pnpm/pnpm
+export PNPM_HOME="/home/jerryng/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"

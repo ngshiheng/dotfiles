@@ -4,10 +4,11 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
 [data]
     name = "Jerry Ng"
     codespaces = {{ $codespaces }}
-{{- if $codespaces }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
-    email = "me@example.com"
-{{- else }}{{/* Interactive setup, so prompt for an email address */}}
-    {{- $email := promptString "email"}}
+{{- if $codespaces }}{{/* Codespaces dotfiles setup is non-interactive */}}
+    email = ""
+    gpgsign = true
+{{- else }}{{/* Interactive setup */}}
+    {{- $email := promptString "email" -}}
     {{- $gpgsign := promptBool "gpgsign" false}}
     email = {{ $email | quote }}
     gpgsign = {{ $gpgsign }}

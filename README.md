@@ -44,12 +44,14 @@ To add/remove/edit prompts:
 vim ~/.local/share/chezmoi/.chezmoi.toml.tmpl
 ```
 
+To test templates, use `chezmoi execute-template < dot_gitconfig.tmpl` ([ref](https://www.chezmoi.io/user-guide/templating/#testing-templates)).
+
 ### `run_once_install-packages.sh` script
 
 The [`run_once_install-packages.sh`](run_once_install-packages.sh) script runs with the following assumptions (i.e. requirements):
 
-- `bash` is installed; this is so that it can install [Homebrew](https://brew.sh/).
-- `zsh` as the default Unix shell of choice.
+-   `bash` is installed; this is so that it can install [Homebrew](https://brew.sh/).
+-   `zsh` as the default Unix shell of choice.
 
 Check out the [Understand How Scripts Work](https://www.chezmoi.io/user-guide/use-scripts-to-perform-actions/#understand-how-scripts-work) page.
 

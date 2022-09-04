@@ -7,6 +7,11 @@ exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+if [ -n "$CODESPACES" ]; then
+    echo "${BLUE} $(date -u):\t Exit. Skip run_once_install for codespaces."
+    exit
+fi
+
 echo "${BLUE} $(date -u):\t Running run_once_install-packages.sh once..."
 
 # Install Homebrew

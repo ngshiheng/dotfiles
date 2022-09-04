@@ -2,25 +2,30 @@
 
 BLUE='\033[33;34m'
 
-# Checks if a command exists in shell
-exists() {
+# exist checks if a command exist in shell
+exist() {
     command -v "$1" >/dev/null 2>&1
 }
 
+# log writes message to stdout with a timestamp
+log() {
+    printf "${BLUE} $(date -u): $1\n"
+}
+
 if [ -n "$CODESPACES" ]; then
-    echo "${BLUE} $(date -u):\t Exit. Skip run_once_install for codespaces."
+    log "Exit. Skip run_once_install for codespaces."
     exit
 fi
 
-echo "${BLUE} $(date -u):\t Running run_once_install-packages.sh once..."
+log "Running run_once_install-packages.sh once..."
 
 # Install Homebrew
 # https://brew.sh/
-if exists brew; then
-    echo "${BLUE} $(date -u):\t Updating Homebrew..."
+if exist brew; then
+    log "Updating Homebrew..."
     brew update
 else
-    echo "${BLUE} $(date -u):\t Installing Homebrew..."
+    log "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
@@ -48,7 +53,7 @@ brew install romkatv/powerlevel10k/powerlevel10k --quiet
 
 # Install fzf
 # https://github.com/junegunn/fzf#using-homebrew
-if ! exists fzf; then brew install fzf && "$(brew --prefix)"/opt/fzf/install --no-bash --key-bindings --completion --update-rc; fi
+if ! exist fzf; then brew install fzf && "$(brew --prefix)"/opt/fzf/install --no-bash --key-bindings --completion --update-rc; fi
 
 # Install fd
 # https://github.com/sharkdp/fd#on-macos
@@ -75,4 +80,4 @@ brew install ydiff --quiet
 # brew tap homebrew/cask-fonts
 # brew install --cask font-fira-code
 
-echo "${BLUE} $(date -u):\t Done. Please restart your shell."
+log "Done. Please restart your shell."

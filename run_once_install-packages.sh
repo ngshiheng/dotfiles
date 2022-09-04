@@ -1,15 +1,13 @@
 #!/bin/sh
 
-BLUE='\033[33;34m'
-
 # exist checks if a command exist in shell
 exist() {
     command -v "$1" >/dev/null 2>&1
 }
 
-# log writes message to stdout with a timestamp
+# log writes message to stdout with a timestamp in blue
 log() {
-    printf "${BLUE} $(date -u): $1\n"
+    printf "\033[33;34m %s: %s\n" "$(date -u)" "$1"
 }
 
 if [ -n "$CODESPACES" ]; then

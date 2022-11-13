@@ -1,3 +1,6 @@
+# Uncomment the following line to start zsh startup time profiling.
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 
 # Initialization code that may require console input (password prompts, [y/n]
@@ -101,9 +104,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # https://github.com/moovweb/gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
-# ...
-[[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"
-
 # https://github.com/junegunn/fzf 
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
@@ -115,3 +115,10 @@ export FZF_DEFAULT_OPTS="--ansi"
 # https://github.com/pnpm/pnpm
 export PNPM_HOME="/home/jerryng/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# ...
+[[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"
+
+
+# Uncomment the following line to end zsh startup time profiling.
+# zprof

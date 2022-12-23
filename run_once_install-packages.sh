@@ -78,4 +78,8 @@ brew install ydiff --quiet
 # brew tap homebrew/cask-fonts
 # brew install --cask font-fira-code
 
+# Install asdf
+# https://asdf-vm.com/guide/getting-started.html
+brew install asdf --quiet
+
 log "Done. Please restart your shell."

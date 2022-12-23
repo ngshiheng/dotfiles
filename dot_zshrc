@@ -97,13 +97,6 @@ source "$HOME/.aliases"
 # https://python-poetry.org/
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# https://github.com/nvm-sh/nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# https://github.com/moovweb/gvm
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
 # https://github.com/junegunn/fzf 
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
@@ -111,10 +104,6 @@ export FZF_DEFAULT_OPTS="--ansi"
 
 # https://github.com/BurntSushi/ripgrep
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-
-# https://github.com/pnpm/pnpm
-export PNPM_HOME="/home/jerryng/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # ...
 [[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"

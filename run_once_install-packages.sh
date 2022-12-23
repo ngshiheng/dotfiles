@@ -7,7 +7,7 @@ exist() {
 
 # log writes message to stdout with a timestamp in blue
 log() {
-    printf "\033[33;34m %s: %s\n" "$(date -u)" "$1"
+    printf "\033[33;34m [%s] %s\n" "$(date)" "$1"
 }
 
 if [ -n "$CODESPACES" ]; then
@@ -81,5 +81,8 @@ brew install ydiff --quiet
 # Install asdf
 # https://asdf-vm.com/guide/getting-started.html
 brew install asdf --quiet
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add python
 
 log "Done. Please restart your shell."

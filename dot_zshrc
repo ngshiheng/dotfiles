@@ -95,7 +95,7 @@ source "$HOME/.aliases"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # https://python-poetry.org/
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # https://github.com/junegunn/fzf 
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"

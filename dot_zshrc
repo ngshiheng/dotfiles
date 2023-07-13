@@ -105,6 +105,9 @@ export FZF_DEFAULT_OPTS="--ansi"
 # https://github.com/BurntSushi/ripgrep
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
+# https://github.com/direnv/direnv
+eval "$(direnv hook zsh)"
+
 # ...
 [[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"
 

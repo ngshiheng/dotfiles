@@ -85,4 +85,8 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add golang https://github.com/kennyp/asdf-golang.git
 asdf plugin add python
 
+# Install direnv
+# https://direnv.net/docs/installation.html
+brew install direnv --quiet
+
 log "Done. Please restart your shell."

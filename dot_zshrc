@@ -107,6 +107,7 @@ export FZF_DEFAULT_OPTS="--ansi"
 
 # https://github.com/direnv/direnv
 eval "$(direnv hook zsh)"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # ...
 [[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"

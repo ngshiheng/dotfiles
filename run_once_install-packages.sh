@@ -73,6 +73,10 @@ brew install rich --quiet
 # https://github.com/ymattw/ydiff#install-with-homebrew
 brew install ydiff --quiet
 
+# Install lsd
+# https://github.com/lsd-rs/lsd
+brew install lsd --quiet
+
 # Install Fira Code
 # https://github.com/tonsky/FiraCode/wiki/Installing
 # brew tap homebrew/cask-fonts

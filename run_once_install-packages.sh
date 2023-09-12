@@ -77,6 +77,10 @@ brew install ydiff --quiet
 # https://github.com/lsd-rs/lsd
 brew install lsd --quiet
 
+# Install pass
+# https://www.passwordstore.org/
+brew install pass --quiet
+
 # Install Fira Code
 # https://github.com/tonsky/FiraCode/wiki/Installing
 # brew tap homebrew/cask-fonts

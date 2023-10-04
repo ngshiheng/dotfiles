@@ -81,6 +81,10 @@ brew install lsd --quiet
 # https://www.passwordstore.org/
 brew install pass --quiet
 
+# Install nvim
+# https://formulae.brew.sh/formula/neovim
+brew install neovim --quiet
+
 # Install Fira Code
 # https://github.com/tonsky/FiraCode/wiki/Installing
 # brew tap homebrew/cask-fonts

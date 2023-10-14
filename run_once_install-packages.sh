@@ -103,4 +103,8 @@ asdf direnv setup --shell zsh --version latest
 # https://direnv.net/docs/installation.html
 brew install direnv --quiet
 
+# Install tldr
+# https://github.com/tldr-pages/tldr#how-do-i-use-it
+brew install tldr --quiet
+
 log "Done. Please restart your shell."

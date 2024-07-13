@@ -96,15 +96,13 @@ brew install asdf --quiet
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add golang https://github.com/kennyp/asdf-golang.git
 asdf plugin add python
-asdf plugin-add direnv
-asdf direnv setup --shell zsh --version latest
-
-# Install direnv
-# https://direnv.net/docs/installation.html
-brew install direnv --quiet
 
 # Install tldr
 # https://github.com/tldr-pages/tldr#how-do-i-use-it
 brew install tldr --quiet
+
+# Install llm
+# https://github.com/simonw/llm
+brew install llm --quiet
 
 log "Done. Please restart your shell."

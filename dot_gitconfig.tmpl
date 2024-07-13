@@ -10,6 +10,7 @@
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 	ll = log --oneline
 	st = status
+	semantic-commit = "!f() { git commit -m \"$(git diff --staged | llm -t semantic_commit)\"; }; f"
 [pull]
 	rebase = true
 [push]

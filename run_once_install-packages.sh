@@ -85,14 +85,6 @@ brew install neovim --quiet
 # brew tap homebrew/cask-fonts
 # brew install --cask font-fira-code
 
-# Install asdf
-# https://asdf-vm.com/guide/getting-started.html
-brew install asdf --quiet
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-asdf plugin add python
-asdf plugin add uv
-
 # Install tldr
 # https://github.com/tldr-pages/tldr#how-do-i-use-it
 brew install tldr --quiet
@@ -100,5 +92,10 @@ brew install tldr --quiet
 # Install llm
 # https://github.com/simonw/llm
 brew install llm --quiet
+
+# Install mise
+# https://mise.jdx.dev/getting-started.html
+curl https://mise.run | sh
+# echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 
 log "Done. Please restart your shell."

@@ -10,11 +10,6 @@ log() {
     printf "\033[33;34m [%s] %s\n" "$(date)" "$1"
 }
 
-if [ -n "$CODESPACES" ]; then
-    log "Exit. Skip run_once_install for codespaces."
-    exit
-fi
-
 log "Running run_once_install-packages.sh once..."
 
 # Install Homebrew

@@ -1,15 +1,7 @@
-{{- $codespaces:= env "CODESPACES" | not | not -}}
-sourceDir = {{ .chezmoi.sourceDir | quote }}
+{{- $email := promptString "email" -}}
+{{- $gpgsign := promptBool "gpgsign" false}}
 
 [data]
     name = "Jerry Ng"
-    codespaces = {{ $codespaces }}
-{{- if $codespaces }}{{/* Codespaces dotfiles setup is non-interactive */}}
-    email = ""
-    gpgsign = true
-{{- else }}{{/* Interactive setup */}}
-    {{- $email := promptString "email" -}}
-    {{- $gpgsign := promptBool "gpgsign" false}}
     email = {{ $email | quote }}
     gpgsign = {{ $gpgsign }}
-{{- end }}

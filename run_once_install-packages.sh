@@ -42,7 +42,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Install p10k
 # https://github.com/romkatv/powerlevel10k#homebrew
-brew install powerlevel10k
+brew install powerlevel10k --quiet
 
 # Install fzf
 # https://github.com/junegunn/fzf#using-homebrew
@@ -95,7 +95,7 @@ brew install llm --quiet
 
 # Install mise
 # https://mise.jdx.dev/getting-started.html
-curl https://mise.run | sh
+if ! exist mise; then curl https://mise.run | sh; fi
 # echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 
 log "Done. Please restart your shell."

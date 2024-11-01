@@ -47,7 +47,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Install p10k
 # https://github.com/romkatv/powerlevel10k#homebrew
-brew install romkatv/powerlevel10k/powerlevel10k --quiet
+brew install powerlevel10k
 
 # Install fzf
 # https://github.com/junegunn/fzf#using-homebrew
@@ -94,8 +94,9 @@ brew install neovim --quiet
 # https://asdf-vm.com/guide/getting-started.html
 brew install asdf --quiet
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
 asdf plugin add python
+asdf plugin add uv
 
 # Install tldr
 # https://github.com/tldr-pages/tldr#how-do-i-use-it

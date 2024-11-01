@@ -1,6 +1,9 @@
 # Uncomment the following line to start zsh startup time profiling.
 # zmodload zsh/zprof
 
+# Uncomment the following line to trace sourced files in zsh
+# zsh -l --sourcetrace
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 
 # Initialization code that may require console input (password prompts, [y/n]
@@ -104,10 +107,6 @@ export FZF_DEFAULT_OPTS="--ansi"
 
 # https://github.com/BurntSushi/ripgrep
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-
-# ...
-[[ -s "$HOME/.grabrc" ]] && source "$HOME/.grabrc"
-
 
 # Uncomment the following line to end zsh startup time profiling.
 # zprof

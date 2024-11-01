@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	excludesFile = ~/.gitignore_global
+	pager = delta
 [commit]
 	gpgsign = {{ .gpgsign }}
 [alias]
@@ -27,3 +28,18 @@
 	defaultBranch = main
 [diff]
 	algorithm = histogram
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+	line-numbers = true
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+    conflictstyle = zdiff3

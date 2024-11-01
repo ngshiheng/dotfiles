@@ -112,6 +112,9 @@ export FZF_DEFAULT_OPTS="--ansi"
 # https://github.com/BurntSushi/ripgrep
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
 # Activate mise
 # https://mise.jdx.dev/getting-started.html
 eval "$(~/.local/bin/mise activate zsh)"

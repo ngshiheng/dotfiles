@@ -60,6 +60,14 @@ brew install bat --quiet
 # https://github.com/BurntSushi/ripgrep#installation
 brew install ripgrep --quiet
 
+# Install zoxide
+# https://github.com/ajeetdsouza/zoxide
+brew install zoxide --quiet
+
+# Install delta
+# https://github.com/dandavison/delta
+brew install git-delta --quiet
+
 # Install rich
 # https://github.com/Textualize/rich-cli#macos
 brew install rich --quiet

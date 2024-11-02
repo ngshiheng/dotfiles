@@ -1,3 +1,6 @@
+#==============================================================================
+#                             DEBUGGING OPTIONS
+#==============================================================================
 # Uncomment the following line to start zsh startup time profiling.
 # zmodload zsh/zprof
 
@@ -5,8 +8,9 @@
 # zsh -l --sourcetrace
 
 
-# Disable brew auto update
-export HOMEBREW_NO_AUTO_UPDATE=1
+#==============================================================================
+#                         POWERLEVEL10K CONFIGURATION
+#==============================================================================
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 
@@ -76,7 +80,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,24 +105,41 @@ source "$HOME/.aliases"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# https://python-poetry.org/
+
+#==============================================================================
+#                           ENVIRONMENT VARIABLES
+#==============================================================================
+# Disable brew auto update
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+
+#==============================================================================
+#                              TOOL INTEGRATIONS
+#==============================================================================
+# Poetry configuration
 export PATH="$HOME/.local/bin:$PATH"
 
-# https://github.com/junegunn/fzf 
+# FZF configuration
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 
-# https://github.com/BurntSushi/ripgrep
+# Ripgrep configuration
 [ -f "$HOME/.ripgreprc" ] && export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
-# https://github.com/ajeetdsouza/zoxide
+# Zoxide initialization
 eval "$(zoxide init zsh)"
 
-# Activate mise
-# https://mise.jdx.dev/getting-started.html
+# Mise initialization
 eval "$(~/.local/bin/mise activate zsh)"
 
+# Atuin shell history
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow)"
 
+
+#==============================================================================
+#                              PROFILING END
+#==============================================================================
 # Uncomment the following line to end zsh startup time profiling.
 # zprof

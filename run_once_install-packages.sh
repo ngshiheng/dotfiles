@@ -76,6 +76,10 @@ brew install lsd --quiet
 # https://www.passwordstore.org/
 brew install pass --quiet
 
+# Install atuin
+# https://atuin.sh/
+if ! exist atuin; then curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh; fi
+
 # Install nvim
 # https://formulae.brew.sh/formula/neovim
 brew install neovim --quiet

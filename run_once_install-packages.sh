@@ -7,7 +7,7 @@ exist() {
 
 # log writes message to stdout with a timestamp in blue
 log() {
-    printf "\033[33;34m [%s] %s\n" "$(date)" "$1"
+    printf "\033[1;36m%s\033[0m %s\n" "$(date +%H:%M:%S)" "$1"
 }
 
 log "Running run_once_install-packages.sh once..."

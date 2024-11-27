@@ -132,6 +132,11 @@ eval "$(zoxide init zsh)"
 
 # Mise initialization
 eval "$(~/.local/bin/mise activate zsh)"
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  eval "$($HOME/.local/bin/mise activate zsh --shims)"
+elif; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
 
 # Atuin shell history
 . "$HOME/.atuin/bin/env"

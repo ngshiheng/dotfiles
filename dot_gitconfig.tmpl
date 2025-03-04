@@ -18,12 +18,14 @@
 	autoSetupRemote = true
 [fetch]
 	prune = true
+	pruneTags = true
 [pager]
 	branch = false
 [rerere]
 	enabled = true
 [rebase]
 	autostash = true
+	updateRefs = true
 [init]
 	defaultBranch = main
 [diff]
@@ -42,4 +44,10 @@
     # light = true
 
 [merge]
-    conflictstyle = zdiff3
+	conflictstyle = zdiff3
+[tag]
+	sort = version:refname
+[help]
+	autocorrect = prompt
+[branch]
+	sort = -committerdate

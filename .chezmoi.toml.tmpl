@@ -1,7 +1,12 @@
-{{- $email := promptString "email" -}}
-{{- $gpgsign := promptBool "gpgsign" false}}
+{{- $email := promptString "git email address" -}}
+{{- $gpgsign := promptBool "enable GPG commit signing" false -}}
+{{- $signingkey := "" -}}
+{{- if $gpgsign -}}
+{{-   $signingkey = promptString "GPG signing key ID (run 'gpg --list-secret-keys --keyid-format=long' to find it, or leave empty for default)" -}}
+{{- end -}}
 
 [data]
     name = "Jerry Ng"
     email = {{ $email | quote }}
     gpgsign = {{ $gpgsign }}
+    signingkey = {{ $signingkey | quote }}

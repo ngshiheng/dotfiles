@@ -11,8 +11,8 @@ signingkey = {{ .signingkey }}
 [commit]
 	gpgsign = {{ .gpgsign }}
 [alias]
-	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
-	ll = log --oneline
+	lg = "!git log --all --pretty=oneline --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' --color=always | fzf --ansi --preview 'git show --pretty=medium --color=always $(echo {} | cut -d\" \" -f1)' | cut -d' ' -f1"
+	ll = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 	st = status
 	semantic-commit = "!f() { git commit -m \"$(git diff --staged | llm -t semantic_commit)\"; }; f"
 [pull]

@@ -1,8 +1,11 @@
 # Direnv files
+
 .direnv
 .envrc
 
 # Editor specific files and folders
+
+.clinerules
 .idea
 .vscode
-
+memory-bank/

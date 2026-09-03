@@ -5,7 +5,11 @@
 
 # Editor specific files and folders
 
-.clinerules
 .idea
 .vscode
-memory-bank/
+
+# LLM files and folders
+
+.serena
+AGENTS.md
+plans/

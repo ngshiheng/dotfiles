@@ -18,4 +18,3 @@ web:*.{html,css,js}*
 
 # Because who cares about case!?
 --smart-case
-

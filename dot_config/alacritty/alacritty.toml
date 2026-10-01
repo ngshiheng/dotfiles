@@ -30,3 +30,13 @@ style = "Italic"
 [font.bold_italic]
 family = "FiraCode Nerd Font"
 style = "Bold Italic"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+action = "SelectNextTab"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+action = "SelectPreviousTab"

@@ -10,6 +10,7 @@
 
 # LLM files and folders
 
+.opencode
 .serena
 AGENTS.md
-plans/
+openspec

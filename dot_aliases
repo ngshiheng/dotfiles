@@ -4,5 +4,3 @@ alias fp='fzf --preview "bat --style=numbers --color=always --line-range :500 {}
 alias ls='lsd'
 alias man='tldr'
 alias rm='rm -I'
-alias vi='nvim'
-alias vim='nvim'

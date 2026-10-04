@@ -80,10 +80,6 @@ brew install pass --quiet
 # https://atuin.sh/
 if ! exist atuin; then curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh; fi
 
-# Install nvim
-# https://formulae.brew.sh/formula/neovim
-brew install neovim --quiet
-
 # Install Fira Code
 # https://github.com/tonsky/FiraCode/wiki/Installing
 # brew tap homebrew/cask-fonts

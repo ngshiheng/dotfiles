@@ -1,6 +1,7 @@
 alias cat='bat --paging=never'
 alias cd='z'
-alias fp='fzf --preview "bat --style=numbers --color=always --line-range :500 {}" --bind "enter:execute(less {})"'
+alias fp='fzf --preview "bat --style=numbers --color=always --line-range :500 {}" --bind "enter:execute(bat {})"'
+alias less='bat --paging=always'
 alias ls='lsd'
 alias man='tldr'
 alias rm='rm -I'

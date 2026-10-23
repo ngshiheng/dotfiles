@@ -6,6 +6,7 @@ blur = true
 dynamic_padding = true
 dynamic_title = true
 opacity = 0.85
+option_as_alt = "Both"
 padding = { x = 12, y = 12 }
 
 [cursor]
@@ -40,3 +41,13 @@ action = "SelectNextTab"
 key = "Tab"
 mods = "Control|Shift"
 action = "SelectPreviousTab"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001BB"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001BF"

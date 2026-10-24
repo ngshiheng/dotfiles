@@ -51,3 +51,7 @@ chars = "\u001BB"
 key = "Right"
 mods = "Alt"
 chars = "\u001BF"
+
+[scrolling]
+history = 100000
+multiplier = 3

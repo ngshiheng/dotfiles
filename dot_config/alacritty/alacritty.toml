@@ -10,7 +10,7 @@ option_as_alt = "Both"
 padding = { x = 12, y = 12 }
 
 [cursor]
-style = { shape = "Block", blinking = "On" }
+style = { shape = "Block", blinking = "Always" }
 blink_interval = 500
 
 [font]
